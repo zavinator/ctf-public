@@ -121,10 +121,6 @@ void Fly(int from, int to, int ships, Star &fromStar, Star &toStar)
 
 
 int main() {
-  // Disable synchronization to make cin/cout much faster.
-  // Don't use scanf/printf then. Of course, you can do your
-  // own scanf without using cin/cout if you decide to.
-  // This is just an example.
   std::ios::sync_with_stdio(false);
 
   // Read initial galaxy configuration.
@@ -136,7 +132,6 @@ int main() {
     stars.push_back(Star(x, y));
   }
 
-  //int round = 0;
   while (true) 
   {
     // invalidate intel
