@@ -100,7 +100,7 @@ May the Packet be with you!
 Zobrazení zdrojového kódu stránky:
 
 ```
-/"+open(__file__).read()+"`
+/"+open(__file__).read()+"
 ```
 
 ```python
