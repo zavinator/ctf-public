@@ -65,6 +65,8 @@ data = {
 }
 ```
 
+### 1. Testy
+
 Testování citlivosti vstupů na různé znaky odhalí, že parametr `card-number` ohlásí chybu při použití uvozovky `"`:
 
 ```python
@@ -96,7 +98,7 @@ Výstup
 
 Ve výstupu se objevilo číslo nějaké karty! Zkusíme tedy vypsat všechny karty a uvídíme jestli mezi nimi bude i vlajka.
 
-### Program pro výpis vlajky
+### 2. Program pro výpis vlajky
 
 ```python
 import requests
