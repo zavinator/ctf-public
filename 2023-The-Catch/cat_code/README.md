@@ -58,13 +58,11 @@ def meowmeow(meow):
     return meeoww
 ```
 
-Program ovšem i tak po spuštění zůstane viset, protože výpočet vlajky je příliš pomalý. Jedná se o Fibonacciho posloupnoust - s optimalizací opět pomůže ChatGPT-4.
+Program ovšem i tak po spuštění zůstane viset, protože výpočet vlajky je příliš pomalý. Jedná se o Fibonacciho posloupnoust - s optimalizací pomůže ChatGPT-4.
+
 Prompt: Optimize this python code
 
 ![GPT](gpt.png "ChatGPT-4")
-
-
-### Optimalizovaný `meow.py`
 
 ```python
 UNITE = 1

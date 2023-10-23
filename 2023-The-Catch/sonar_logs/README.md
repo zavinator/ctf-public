@@ -10,11 +10,8 @@ each crew member must be able to operate the sonar and understand its logs. Your
 May you have fair winds and following seas!
 
 Update: Be aware that some devices do not use up-to-date libraries - this sonar, for example, is based on python and uses an old pytz library version 2020.4.
-```
 
 The Logs:
-
-```
 2023-10-01 22:51:22 Pacific/Honolulu - Transmitters activated
 2023-10-02 00:32:51 US/Pacific - Receiver 5 up
 2023-10-02 00:33:45 America/Vancouver - Preprocessor up
@@ -35,8 +32,6 @@ Znaky vlajky tak musíme seřadit podle času. Řešení pomocí ChatGPT-4:
 ![GPT](gpt.png "ChatGPT-4")
 
 Stačili pouze dvě úpravy - načíst data ze souboru a upravit výpis vlajky.
-
-### Program pro výpis vlajky
 
 ```python
 from datetime import datetime
