@@ -1,13 +1,6 @@
 # Řešení některých úloh The Catch 2023
 
-## Below deck troubles
-
+* [Naval chef's recipe](naval)
 * [Cat code](cat_code)
-
-## Troubles on the bridge
-
 * [Keyword of the day](keyword)
-
-## Crew drills
-
 * [Sonal logs](sonar_logs)
