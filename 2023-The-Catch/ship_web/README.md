@@ -18,7 +18,7 @@ Hint2: Visit the other web sites hosted on the same server. Don't let non-existe
 ## Řešení
 
 Docela obtížná úloha, která i podle průběhu soutěže dělala spoustu lidem problémy - později se proto objevil Hint2.
-Ve zdrojovém kódu webu je na konci:
+Ve zdrojovém kódu webu http://www.cns-jv.tcc je na konci:
 
 ```html
 <small class="text-secondary" style="font-size: 7pt">ver. RkxBR3sgICAgLSAgICAtICAgIC0gICAgfQ==</small>
@@ -37,7 +37,7 @@ Název DNS: structure.cns-jv.tcc
 ```
 
 Ovšem kromě `www.cns-jv.tcc` (10.99.0.64) ostatní adresy nejsou v DNS. 
-Tady jsem se na docela dlouho zasekl a asi jen díky tomu, že jsem hrál i minulé ročníky [Torso of Web Server](../2021-The-Catch/system_access
+Tady jsem se na docela dlouho zasekl a asi jen díky tomu, že jsem hrál i minulé ročníky [Torso of Web Server](2021-The-Catch/system_access
 /torso_of_web_server) jsem na to nakonec přišel.
 
 Řešení je buď doplnit záznamy do `/etc/hosts` nebo podvrhnout `Host` přes `curl`:
