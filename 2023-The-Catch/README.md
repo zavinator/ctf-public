@@ -1,5 +1,6 @@
 # Řešení některých úloh The Catch 2023
 
+* [Ship web server](ship_web)
 * [Naval chef's recipe](naval)
 * [Cat code](cat_code)
 * [Keyword of the day](keyword)

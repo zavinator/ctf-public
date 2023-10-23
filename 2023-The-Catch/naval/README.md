@@ -31,6 +31,7 @@ PORT    STATE SERVICE VERSION
 
 ```
 curl http://chef-menu.galley.cns-jv.tcc
+
 <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
 <html><head>
   <title>301 Moved Permanently</title>
