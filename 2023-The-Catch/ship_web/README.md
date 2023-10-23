@@ -37,7 +37,7 @@ Název DNS: structure.cns-jv.tcc
 ```
 
 Ovšem kromě `www.cns-jv.tcc` (10.99.0.64) ostatní adresy nejsou v DNS. 
-Tady jsem se na docela dlouho zasekl a asi jen díky tomu, že jsem hrál i minulé ročníky [Torso of Web Server](/zavinator/ctf-public/blob/master/2021-The-Catch/system_access/torso_of_web_server) jsem na to nakonec přišel.
+Tady jsem se na docela dlouho zasekl a asi jen díky tomu, že jsem hrál i minulé ročníky [Torso of Web Server](/2021-The-Catch/system_access/torso_of_web_server) jsem na to nakonec přišel.
 
 Řešení je buď doplnit záznamy do `/etc/hosts` nebo podvrhnout `Host` přes `curl`:
 
