@@ -6,5 +6,5 @@
 * [Naval chef's recipe](naval)
 * [Navigation plan](navigation_plan)
 * [Ship web server](ship_web)
-* [Sonal logs](sonar_logs)
+* [Sonar logs](sonar_logs)
 * [U.S.A.](usa)
