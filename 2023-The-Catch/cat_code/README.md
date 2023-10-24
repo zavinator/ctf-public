@@ -1,4 +1,4 @@
-# Sonar logs
+# Cat code
 
 ## Zadání
 
