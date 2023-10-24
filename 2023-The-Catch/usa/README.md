@@ -52,7 +52,7 @@ http://universal-ship-api.cns-jv.tcc/api/v1/user/
 
 ### Google
 
-Na tomto místě jsem se na dlouho zasekl. Nakonec mě napadlo zkusit Google, protože endpointy jako `api/v1/admin/` se mi zdáli nějak povědomé a mohlo by se jednat o nějaký standard.
+Na tomto místě jsem se na dlouho zasekl. Nakonec mě napadlo zkusit Google, protože endpointy jako `api/v1/admin/` se mi zdály nějak povědomé a mohlo by se jednat o nějaký standard.
 
 ![Google](google.png "Google")
 
