@@ -31,7 +31,7 @@ Znaky vlajky tak musíme seřadit podle času. Řešení pomocí ChatGPT-4:
 
 ![GPT](gpt.png "ChatGPT-4")
 
-Stačili pouze dvě úpravy - načíst data ze souboru a upravit výpis vlajky.
+Stačily pouze dvě úpravy - načíst data ze souboru a upravit výpis vlajky.
 
 ```python
 from datetime import datetime
