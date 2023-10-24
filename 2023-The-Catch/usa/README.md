@@ -60,10 +60,10 @@ A hned první odkaz - bingo!
 https://0xdf.gitlab.io/2022/04/12/htb-backend.html
 
 Dále jsem již postupoval přesně podle uvedeného writeupu. 
-Úlohy se pouze drobně liší - v úloze The Catch bylo potřeba vygenerovat cookie pomocí RSA klíče, který šlo stáhnout ze serveru pomocí endpointu `/file`. V HTB se jednalo o HS256 a secret key uložený v souboru.
+Úlohy se pouze drobně liší - v The Catch bylo potřeba vygenerovat cookie pomocí RSA klíče, který šlo stáhnout ze serveru pomocí endpointu `/file`. V HTB se jednalo o HS256 a secret key uložený v souboru...
 
 
-### Vlajka
+## Vlajka
 
 ```
 FLAG{910P-iUeJ-Wwq1-i8L2}

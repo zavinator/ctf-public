@@ -4,6 +4,7 @@
 * [Component replacement](component_replacement)
 * [Keyword of the day](keyword)
 * [Naval chef's recipe](naval)
+* [Navigation plan](navigation_plan)
 * [Ship web server](ship_web)
 * [Sonal logs](sonar_logs)
 * [U.S.A.](usa)

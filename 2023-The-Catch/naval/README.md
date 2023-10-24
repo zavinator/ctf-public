@@ -46,7 +46,7 @@ curl http://chef-menu.galley.cns-jv.tcc
 
 Web HTTP na portu 80 obsahuje přesměrování na HTTPS, takže klasický grafický browser zobrazí ihned https web, kde ale vlajka není.
 
-### Vlajka
+## Vlajka
 
 ```
 FLAG{ytZ6-Pewo-iZZP-Q9qz}
